@@ -22,71 +22,13 @@ a. Below matrix represents the distance of 5 cities from each other. Represent i
 
 form of a graph
 
-A
-
-0
-
-B
-
-2
-
-C
-
-3
-
-D
-
-20
-
-2
-
-E
-
-1
-
-A
-
-B
-
-C
-
-D
-
-E
-
-2
-
-0
-
-15
-
-0
-
-20
-
-3
-
-15
-
-2
-
-20 13
-
-20
-
-1
-
-20
-
-0
-
-9
-
-9
-
-0
-
-20 13
+|   | A  | B  | C  | D  | E  |
+|---|----|----|----|----|----|
+| A | 0  | 2  | 3  | 20 | 1  |
+| B | 2  | 0  | 15 | 2  | 20 |
+| C | 3  | 15 | 0  | 20 | 13 |
+| D | 20 | 2  | 20 | 0  | 9  |
+| E | 1  | 20 | 13 | 9  | 0  |
 
 b. Apply Nearest-neighbor heuristic to this matrix and find the approximate solution
 
