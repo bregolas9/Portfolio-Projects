@@ -1,5 +1,5 @@
 # Portfolio-Projects
- ##Python
+##Python
  1. Analysis of Algorithms
  2. Data Structures
  3. Intro to Computer Science 1
@@ -7,25 +7,25 @@
  5. Software Engineering 2
  6. Text_Based_Adventure_Game
  
- ##JavaScript
+##JavaScript
  1. Intro to Databases
  2. Software Engineering 1
  3. Web Developement
  
- ##C
+##C
  1. Operating Systems 1
 
- ##SQL
+##SQL
  1. Intro to Databases
 
- ##Assembly
+##Assembly
  1. Computer Architecture and Asssembly
 
- ##HTML
+##HTML
  1. Software Engineering 1
  2. Web Developement
 
- ##CSS
+##CSS
  1. Software Engineering 1
  2. Web Developement
 
