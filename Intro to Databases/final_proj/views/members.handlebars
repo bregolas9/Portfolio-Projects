@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+<title>BusterBlocks Video</title>
+<meta charset="UTF-8">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table, th, td {
+    border: 1px solid black
+}
+</style>
+<body>
+
+<h1>Members</h1>
+<p>Database of all member info</p>
+<table id="member-table">
+    <thead>
+        {{#each data.[0]}}
+        <th>{{@key}}></th>
+        {{/each}}
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td>{{this.memberID}}</td>
+            <td>{{this.member_name}}</td>
+            <td>{{this.email}}</td>
+            <td><button onclick="deleteMember({{this.memberID}})">X</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<p1>
+    Add new member:
+</p1>
+<form id="add-member-form" method="POST" action="/add-member-form">
+    <label for="input-memberID">memberID: </label>
+    <input type="number" name="input-memberID" id="input-memberID">
+    
+    <label for="input-name">Name: </label>
+    <input type="text" name="input-name" id="input-name">
+
+    <label for="input-email">email: </label>
+    <input type="text" name="input-email" id="input-email">
+
+    <input type="submit">
+</form>
+
+
+<br><br>
+<h2>Search member in database</h2>
+<p>Search by name using the field below. Partial names are OK too!</p>
+<form id="search-people-html" method='GET' action='/members'>
+    <label for="input-member_name">Search by Member Name: </label>
+    <input type="text" name="member_name" id="input-member_name-html-search">
+    <input type="submit">
+</form>
+<br><br>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6db30c354f8786f2',m:'esocpo9dEQD49P4LRlx6fZVOO6OSZwb01T0zJ4ERwY0-1644472098-0-ASjzudE2pDbdGQoxHD7OWMGUUu9Lrdl5Ka2fnKZSlCiWmV6wqFamLN/4uu79czpM89rzv8xkaxg4KEc3Nd9LOCalzW5Z5DJE+78uECaSttkGtQA+tF+ZTZjydAf133vKnI0SNxW+okEGEe9n86Z4vP5yLFA4nTV0g7c3hJd6/dcDbZ8W5gCF5DNXHEHQq/fthg==',s:[0x92112b06e0,0x6e1dc2f7d6],}})();</script></body>
+<li><a href="rentals"> Want to look at rentals? </a></li>
+<li><a href="transactions"> Want to look at transactions? </a></li>
+<li><a href="movies"> Want to look at movies? </a></li>
+<li><a href="/"> Want to go back to the index? </a></li>
+</html> 

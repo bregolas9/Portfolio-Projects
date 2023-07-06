@@ -1,0 +1,105 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-large;
+  background-color: rgba(150, 18, 18, 0.274);
+  color: Black;
+  margin: 5%;
+  padding: 5%;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.footer {
+  height: 130px;
+}
+#invertedColor {
+  background-color: black;
+  color: black;
+  border-radius: 8px;
+  padding: 8px;
+}
+table {
+  width: 100%;
+}
+caption {
+  font-size: 30px;
+  margin: 20px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 20px;
+}
+th {
+  background-color: orangered;
+  color: black;
+}
+tr:nth-child(even) {
+  background-color: white;
+}
+tr:nth-child(odd) {
+  background-color: white;
+}
+tr:hover {
+  background-color: rgb(105, 102, 55);
+  color: black;
+}
+fieldset, legend, label, input, button {
+  font-family:'Times New Roman', Times, serif;
+  font-size: medium;
+  margin: 5px;
+  padding: 1px;
+  background-color: orangered;
+  color: black;
+  border-color: black;
+}
+label {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+}
+fieldset {
+  margin: auto;
+  margin-top: 50px;
+  width: 20%;
+}
+input, legend {
+  background-color: white;
+}
+button {
+  border-radius: 10%;
+  text-align: center;
+}
+button:hover {
+  background-color: yellow;
+  color: black;
+}
+select {
+  margin: 15px;
+}
+option {
+  margin: 100px;
+} 
+h1, h2 {
+  color: maroon;
+}
+a {
+  color: blue;
+  text-align: center;
+}
+a:visited {
+  color: purple;
+}
+.App {
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<title>BusterBlocks Video</title>
+<meta charset="UTF-8">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table, th, td {
+    border: 1px solid black
+}
+</style>
+</head>
+<a href="/movies">Back to Movies</a>
+<form id="update-movie" action="/movies" method="post">
+    <fieldset>
+        <legend>Update {{movies.itemID}}:</legend>
+        <label>Title:</label>
+        <input type="text" name="title" size="30" maxlength="255" value="{{movies.title}}">
+        <br>
+        <label>Release Year:</label>
+        <input type="number" name="release_year" size="30" maxlength="255" value="{{movies.release_year}}">
+        <br>
+        <label>In Stock:</label>
+        <input type="text" name="in_stock" size="30" maxlength="255" value="{{movies.in_stock}}">
+        <br>
+        <label>Quantity:</label>
+        <input type="text" name="qty" size="30" maxlength="255" value="{{movies.qty}}">
+        <br>
+        <label>Rental Price:</label>
+        <input type="text" name="rental_price" size="30" maxlength="255" value="{{movies.rental_price}}">
+        <br>
+        
+        <input type="button" onclick="updateMovies({{movies.itemID}})" value="Update Movie">
+    </fieldset>
+</form>
+</html>
+
+

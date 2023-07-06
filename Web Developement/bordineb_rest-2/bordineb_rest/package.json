@@ -1,0 +1,17 @@
+{
+  "name": "bordineb_rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "controller.mjs",
+  "scripts": {
+    "start": "nodemon controller.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BusterBlocks Video</title>
+<meta charset="UTF-8">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table, th, td {
+    border: 1px solid black
+}
+</style>
+</head>
+<body>
+
+<h1>Movies</h1>
+<p>database of all movies</p>
+<table id="movie-table">
+    <thead>
+        {{#each data.[0]}}
+        <th>{{@key}}></th>
+        {{/each}}
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr data-value={{this.itemID}}>
+            <td>{{this.itemID}}</td>
+            <td>{{this.title}}</td>
+            <td>{{this.release_year}}</td>
+            <td>{{this.in_stock}}</td>
+            <td>{{this.qty}}</td>
+            <td>{{this.rental_price}}</td>
+            <td><button onclick="deleteMovie({{this.itemID}})">X</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<script src="./js/deletemovie.js"></script>
+<h2>
+    Add new movie
+</h2>
+<form id="add-movie-form" method="POST" action="/add-movie-form">
+    <label for="input-itemID">itemID: </label>
+    <input type="number" name="input-itemID" id="input-itemID">
+    
+    <label for="input-title">title: </label>
+    <input type="text" name="input-title" id="input-title">
+
+    <label for="input-release-year">release_year: </label>
+    <input type="number" name="input-release-year" id="input-release-year">
+
+    <label for="input-qty">Quantity: </label>
+    <input type="number" name="input-quantity" id="input-quantity">
+
+    <label for="input-rental-price">rental_price: </label>
+    <input type="number" name="input-rental-price" id="input-rental-price">
+
+    <input type="submit">
+</form>
+
+<br><br>
+<h2>Update movie quantity</h2>
+<p>Select a movie, enter the desired quantity and click update to change value</p>
+<form id="update-movie-form-ajax">
+
+    <label for="input-itemID">itemID: </label>
+    <select name="input-itemID" id="idSelect">
+        <option value="test">Select a movie by itemID</option>
+        {{#each data}}
+        <option value="{{this.itemID}}">{{this.itemID}}</option>
+        {{/each}}
+    </select>
+
+    <label for="update-quantity">Enter new quantity: </label>
+    <input type="number" name="update-quantity" id="update-quantity">
+    </select>
+    <input type="submit">
+
+</form>
+
+<script src="./js/updatemovie.js"></script>
+<br><br>
+
+<h2>Search movie in database</h2>
+<p>Search by name using the field below. Partial titles are OK too!</p>
+<form id="search-movies-html" method='GET' action='/movies'>
+    <label for="input-title-html-search">Search by Title: </label>
+    <input type="text" name="title" id="input-title-html-search">
+    <input type="submit">
+    <a href='/'><button>Reset</button></a>
+</form>
+<br><br>
+<li><a href="rentals"> Want to look at rentals? </a></li>
+<li><a href="transactions"> Want to look at transactions? </a></li>
+<li><a href="members"> Want to look at members? </a></li>
+<li><a href="/"> Want to go back to the index? </a></li>
+</html> 
