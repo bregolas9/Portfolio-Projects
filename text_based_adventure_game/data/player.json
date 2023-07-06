@@ -1,0 +1,8 @@
+{
+  "name": "Player 1",
+  "location": "entry",
+  "visited_rooms": ["entry"],
+  "inventory": ["letter"],
+  "won": false,
+  "watched_end_credits": false
+}

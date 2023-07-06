@@ -1,0 +1,209 @@
+[
+  {
+    "name": "turn on flashlight",
+    "hints": [
+      "I should find a light source.",
+      "I'm a little weary, maybe a rest would help.",
+      "I should turn on the flashlight."
+    ],
+    "requires": ["flashlight"],
+    "interactions": [
+      {
+        "interaction_type": "turn on",
+        "item": "flashlight",
+        "complete": false
+      }
+    ]
+  },
+  {
+    "name": "open wine cellar door",
+    "hints": [
+      "I should unlock the wine cellar door.",
+      "Why is that mouse hole there?",
+      "I wonder if I could feed something to the mouse.",
+      "I should find food for the mouse in the kitchen.",
+      "I should use the food with the mouse hole."
+    ],
+    "requires": [],
+    "interactions": [
+      {
+        "interaction_type": "use_with",
+        "item": "cheese",
+        "complete": false
+      }
+    ]
+  },
+  {
+    "name": "collect the arsenic",
+    "hints": [
+      "I should find proof of foul play.",
+      "I should explore the wine cellar.",
+      "It looks like someone dropped a bottle of wine, I wonder why.",
+      "That cask looks suspicious.",
+      "The cask looks stuck, I wonder what would happen if I pulled on it.",
+      "I wonder if there is something important on the wine racks.",
+      "There must be something important on the wine racks.",
+      "I wonder why there is arsenic on the wine racks... OH, that's suspicious!"
+    ],
+    "requires": ["arsenic"],
+    "interactions": []
+  },
+  {
+    "name": "find family picture",
+    "hints": [
+      "I need to find out how to confirm the departure times of the family.",
+      "Maybe I should check the clock to make sure it's working.",
+      "I remember seeing a clock in the parlor!",
+      "I want to make sure the family got all their times right.",
+      "If the clock is working, I wonder if they are lying about when they left.",
+      "Maybe the family took a picture. Most families take pictures at reunions.",
+      "I wonder where someone would keep family pictures.",
+      "I bet someone would keep a family picture in their study!",
+      "I should inspect the family photo.",
+      "Maybe I should take the family photo to remember what I saw."
+    ],
+    "requires": ["picture"],
+    "interactions": []
+  },
+  {
+    "name": "make the gum stick",
+    "hints": [
+      "I wonder if there is a way to unlock the powder room door.",
+      "Why is there a pile of papers in the storage room?",
+      "I should really inspect those papers.",
+      "That ventilation grate looks suspicious. Maybe I should inspect it",
+      "It looks like there is something in the ventilation grate!",
+      "I wonder if there is something long enough to get that key out.",
+      "Hmm, I probably need something sticky to 'grab' the key as well.",
+      "I wonder if there is anything in the cloak room which could help me.",
+      "People carry around weird stuff in their coats sometimes!",
+      "This gum would be sticky enough if I chewed it. It's my favorite flavor!",
+      "I still need something long to get the chewed gum in the ventilation.",
+      "I remember seeing something long in the pantry.",
+      "I bet that stick would be long enough.",
+      "I wonder if I could somehow attach the chewed gum to the stick",
+      "I bet this 'gum stick' will be long and sticky enough to get that key!"
+    ],
+    "requires": ["gum stick"],
+    "interactions": []
+  },
+  {
+    "name": "collect silver key",
+    "hints": [
+      "I should return to the storage room with the 'gum stick'.",
+      "I should try to get the key out of the grate with the 'gum stick.'",
+      "I will have to use the 'gum stick' on that grate!",
+      "Hmm, I bet this key is for that locked powder room, I should take it."
+    ],
+    "requires": ["silver key"],
+    "interactions": [
+      {
+        "interaction_type": "use_with",
+        "item": "gum stick",
+        "complete": false
+      }
+    ]
+  },
+  {
+    "name": "open the powder room door",
+    "hints": [
+      "I should try opening the powder room door now that I have a key.",
+      "I should look in the powder room, there may be an important clue."
+    ],
+    "requires": [],
+    "interactions": [
+      {
+        "interaction_type": "use_with",
+        "item": "silver key",
+        "complete": false
+      }
+    ]
+  },
+  {
+    "name": "put the finger on the armor",
+    "hints": [
+      "That shiny finger in the powder room looks important.",
+      "This finger looks like it could go to a suit of armor.",
+      "I wonder where someone would have a suit of armor.",
+      "I bet the armor is in the armory.",
+      "It appears there is only one suit of armor in this supposed 'armory'.",
+      "I bet this finger goes on that armor, I should inspect the armor.",
+      "I better put the finger back, I bet Mr. Knight is very sad it's missing."
+    ],
+    "requires": [],
+    "interactions": [
+      {
+        "interaction_type": "use_with",
+        "item": "finger",
+        "complete": false
+      }
+    ]
+  },
+  {
+    "name": "find the fork",
+    "hints": [
+      "I should find an object that could unlock the bedroom door.",
+      "I wonder where I'd be able to find something that would fit that door", 
+      "Maybe I could use a sturdy object since I don't have the key.",
+      "I wonder if any sturdy objects have the letter 'K' like the door does.",
+      "Hmm, where would something that sturdy be, maybe something made of metal?",
+      "I better check in the dining room, maybe a knife would work.",
+      "I can't find a knife in this room, but I bet that fork is sturdy enough!"
+    ],
+    "requires": ["fork"],
+    "interactions": []
+  },
+  {
+    "name": "unlock the bedroom door",
+    "hints": [
+      "I should unlock the bedroom door with something in my inventory."
+    ],
+    "requires": [],
+    "interactions": [
+      {
+        "interaction_type": "use_with",
+        "item": "fork",
+        "complete": false
+      }
+    ]
+  },
+  {
+    "name": "pull secret garden",
+    "hints": [
+      "I should look in the master bedroom for clues.",
+      "I wonder if there is something hidden in that nightstand.",
+      "I wonder if Mr. Knight wrote about what happened in his diary.",
+      "There does not seem to be anything in the diary, or is there?",
+      "Why did he write the diary in this fashion, it's so grammatically incorrect.",
+      "It appears that maybe the first letter of each line could be important.",
+      "I should take this in case I need it for later.",
+      "The first letters may spell out a word, I wonder what it is.",
+      "I wonder why the word 'Will' is capitalized.",
+      "I feel like I saw what those letters spell out in the study.",
+      "I definitely saw it on the bookcase!",
+      "Hmm, I can't pick it up, maybe I should try what I did on the cask.",
+      "I should pull on the secret garden."
+    ],
+    "requires": ["diary"],
+    "interactions": [
+      {
+        "interaction_type": "pull",
+        "item": "secret garden",
+        "complete": false
+      }
+    ]
+  },
+  {
+    "name": "collect the will",
+    "hints": [
+      "I should definitely explore that crooked hallway below the study.",
+      "I wonder if the word will was capitalized because he hid it in here!",
+      "I should look for the will.",
+      "Those plants look thirsty, I should mist them.",
+      "I should read the will, I bet it would explain why everything happened.",
+      "I need this will for evidence, I should take it."
+    ],
+    "requires": ["will"],
+    "interactions": []
+  }
+]

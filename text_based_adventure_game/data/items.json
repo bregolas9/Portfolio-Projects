@@ -1,0 +1,1404 @@
+[
+  {
+    "name": "letter",
+    "alias": ["message", "note", "correspondence"],
+    "description": ["It looks like a letter from the lawyer, Mr. Henin."],
+    "look_at_message": {
+      "line1": "********************************************************************************",
+      "line2": "Detective,",
+      "line3": "Thank you for responding so quickly to my inquiry. I'm afraid I need your assistance in locating the most recent Will for Mr. Knight. I have no doubt it is in the house but until matters are settled I am not allowed entry and neither is the family. This is good for you though as the house is undisturbed which means you should be able to locate the Will as well as any evidence of foul play. Below is a list of guests at Mr. Knight's birthday, when they arrived and when they departed on April 13th.",
+      "line4": "One last thing, Mr. Knight was not just a fantastic mystery author but a mystery enthusiast, his house reflects this unique interest of his. Rooms are not always as straightforward as they seem, and items often have dual purposes.",
+      "line5": "Here is a list of the guests and their arrival and departure times:",
+      "list_1": "    - Gene Knight: Arrived at 7:55pm with Zhara, departed at 12:00am",
+      "list_2": "    - Zhara Knight: Arrived at 7:55pm with Gene, departed at 10:00pm",
+      "list_3": "    - Constance Knight: Arrived at 8:00pm and departed with Zhara at 10:00pm",
+      "list_4": "    - Martha and Wallace King: Arrived at 8:10pm, departed at 11:00pm",
+      "list_5": "    - Ellis and Karen Knight: Arrived at 5:00pm, departed at 10:00pm",
+      "list_6": "    - Rumor King: Arrived at 8:00pm, departed at 9:00pm",
+      "line12": "Objectives:",
+      "list_collect the will": "    - Locate the will",
+      "list_find family picture": "    - Confirm the departure times of family members",
+      "list_collect the arsenic": "    - Find evidence of foul play",
+      "line16": "Sincerely,",
+      "line17": "E. Henin",
+      "line18": "********************************************************************************"
+    },
+    "is_collectible": true,
+    "discovered": true,
+    "interactions": {}
+  },
+  {
+    "name": "loafers",
+    "alias": ["shoes", "moccasins", "slip-ons", "loafer", "shoe"],
+    "description": ["A pair of of well-worn, brown, leather loafers."],
+    "look_at_message": {
+      "line1": "A pair of of well-worn, brown, leather loafers."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": [
+          "You put the loafers on your feet, but feel somewhat foolish and put them back."
+        ]
+      }
+    }
+  },
+  {
+    "name": "flashlight",
+    "alias": ["torch", "handheld light", "portable light", "light source", "electric lantern"],
+    "description": ["It's currently turned off."],
+    "look_at_message": {
+      "line1": "A new looking yellow plastic flashlight with black accents. It has a button on the side to turn it on."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {
+      "turn on": {
+        "message": ["You turn on the flashlight. It's very bright."],
+        "new_description": ["It's turned on now."],
+        "completes": ["turn on flashlight"]
+      }
+    }
+  },
+  {
+    "name": "bench",
+    "alias": ["seat", "pew", "wood bench", "chair", "benches"],
+    "description": ["A wooden bench with a cushion on it."],
+    "look_at_message": { "line1": "A wooden bench with a cushion on it." },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "sit": {
+        "message": ["You sit down on the bench. It's very comfortable."]
+      }
+    }
+  },
+  {
+    "name": "chandelier",
+    "alias": ["hanging light", "ceiling fixture", "sia"],
+    "description": ["A large, ornate chandelier."],
+    "look_at_message": { "line1": "A large, ornate chandelier." },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": [
+          "You try to swing from the chandelier, but it's too high up."
+        ]
+      }
+    }
+  },
+  {
+    "name": "light switch",
+    "alias": ["switch", "light control"],
+    "description": ["This appears to be the light switch to the chandelier."],
+    "look_at_message": {
+      "line1": "This appears to be the light switch to the chandelier."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "turn on": {
+        "message": [
+          "You flip the light switch on and off, but nothing happens."
+        ]
+      }
+    }
+  },
+  {
+    "name": "gum",
+    "alias": ["mint gum"],
+    "description": ["A rectangular piece of gum in a foil wrapper."],
+    "look_at_message": {
+      "line1": "This flavor of mint gum is your favorite and it reminds you of childhood."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {
+      "chew": {
+        "message": [
+          "You chew the piece of gum, but it's lost some of its flavor. After a few minutes you put it back into the wrapper."
+        ],
+        "new_description": ["A chewed piece of gum in a foil wrapper."],
+        "transforms": [
+          {
+            "from": "gum",
+            "to": "chewed gum"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "chewed gum",
+    "alias": ["sticky wad"],
+    "description": ["A chewed piece of gum in a foil wrapper."],
+    "look_at_message": { "line1": "A chewed piece of gum in a foil wrapper." },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You put the gum on the end of the stick. It's a little gross, but it works. 'Huh, a gum stick.' you think to yourself."
+        ],
+        "requires": ["stick"],
+        "transforms": [
+          {
+            "from": "chewed gum",
+            "to": "gum stick"
+          },
+          {
+            "from": "stick",
+            "to": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "stick",
+    "alias": ["rod", "branch", "twig"],
+    "description": ["A long, thin, wooden stick."],
+    "look_at_message": {
+      "line1": "A long, thin, wooden stick. This might be useful to reach something with."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You put the gum on the end of the stick. It's a little gross, but it works. 'Huh, a gum stick.' you think to yourself."
+        ],
+        "requires": ["chewed gum"],
+        "transforms": [
+          {
+            "from": "chewed gum",
+            "to": "gum stick"
+          },
+          {
+            "from": "stick",
+            "to": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "gum stick",
+    "alias": ["sticky stick"],
+    "description": [
+      "A long, thin, wooden stick with gum on the end."
+    ],
+    "look_at_message": {
+      "line1": "A long, thin, wooden stick with a piece of sticky gum on the end."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You insert the gum stick into the hole in the ventilation grate, completely sure this won't work. To your surprise, as you press the sticky gum against the silver key, it firmly grabs hold and you pull the key out of the grate. Just as it clears the opening, the gum loses its grip and the key lands on the floor next to the grate."
+        ],
+        "new_description": [
+          "A stick with a piece of gum which has lost its stickiness."
+        ],
+        "requires": ["ventilation grate"]
+      }
+    }
+  },
+  {
+    "name": "raincoat",
+    "alias": ["yellow raincoat", "coat", "rain jacket"],
+    "description": ["A yellow raincoat."],
+    "look_at_message": {
+      "line1": "A yellow raincoat with a hood. It has blue and white stripes inside and two large external pockets."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": [
+          "You put on the raincoat. It's a little big, but it fits. Remembering the importance of your task, you take it off and put it back."
+        ]
+      }
+    }
+  },
+  {
+    "name": "peacoat",
+    "alias": [
+      "pea jacket",
+      "reefer coat",
+      "reefer jacket",
+      "double-breasted overcoat"
+    ],
+    "description": ["A black peacoat."],
+    "look_at_message": {
+      "line1": "A black peacoat with a hood. It has two large external pockets.",
+      "gum": "In one pocket there is a piece of gum. It's your favorite flavor."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": [
+          "You put on the peacoat. It's a little big, but it fits. Remembering the importance of your task, you take it off and put it back."
+        ]
+      }
+    }
+  },
+  {
+    "name": "shelves",
+    "alias": ["storage", "shelving unit", "storage rack", "shelf"],
+    "description": [
+      "A set of empty shelves where one might set a briefcase after a long day."
+    ],
+    "look_at_message": {
+      "line1": "A set of empty shelves where one might set a briefcase after a long day."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "climb": {
+        "message": [
+          "You climb up onto the shelves and they rock back and forth violently, threatening to tip over. You quickly climb back down."
+        ]
+      }
+    }
+  },
+  {
+    "name": "hooks",
+    "alias": ["pegs", "hangers", "clasps", "3M hook"],
+    "description": [
+      "A set of hooks where one might hang a coat after a long day."
+    ],
+    "look_at_message": {
+      "line1": "A set of hooks where one might hang a coat after a long day."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "refrigerator",
+    "alias": ["fridge", "cooler", "icebox", "freezer"],
+    "description": ["A large, stainless steel refrigerator."],
+    "look_at_message": {
+      "line1": "A large, stainless steel refrigerator.",
+      "cheese": "You open the refrigerator and find a block of cheese. It's small and seems like it could come in handy."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": ["You don't have anything to put in there now."]
+      }
+    }
+  },
+  {
+    "name": "kitchen sink",
+    "alias": ["sink", "steel sink"],
+    "description": ["A large, stainless steel sink."],
+    "look_at_message": {
+      "line1": "A large, empty, stainless steel sink. Mr. Knight seems to have been a very tidy person."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": ["You don't have anything to put in there now."]
+      },
+      "turn on": {
+        "message": ["You turn on the faucet and wash your hands. A very pleasant experience."]
+      }
+    }
+  },
+  {
+    "name": "cheese",
+    "alias": ["dairy", "cheddar", "block"],
+    "description": ["A small block of cheese."],
+    "look_at_message": {
+      "line1": "A small block of cheese. It's small and seems like it could come in handy."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You place the cheese by the mouse hole and step back. After a moment a small, brown mouse peaks out from the shadow and takes a curious sniff toward the cheese. The little guy darts out to collect the wedge of cheese, dragging it through the hole to the other side of the door. You hear frantic scratching for a moment until the lock makes a soft click sound."
+        ],
+        "requires": ["mouse hole"],
+        "transforms": [
+          {
+            "from": "cheese",
+            "to": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "mouse hole",
+    "alias": [],
+    "description": [
+      "A small hole in the wall by the door. It looks like a mouse might live here."
+    ],
+    "look_at_message": {
+      "line1": "A small hole in the wall by the door. It looks like a mouse might live here."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You place the cheese by the mouse hole and step back. After a moment a small, brown mouse peaks out from the shadow and takes a curious sniff toward the cheese. The little guy darts out to collect the wedge of cheese, dragging it through the hole to the other side of the door. You hear frantic scratching for a moment until the lock makes a soft click sound."
+        ],
+        "requires": ["mouse hole"],
+        "transforms": [
+          {
+            "from": "cheese",
+            "to": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "rice",
+    "alias": ["bag", "grain"],
+    "description": [
+      "A large bag of rice with a hole chewed in the corner allowing some to spill out."
+    ],
+    "look_at_message": {
+      "line1": "A large bag of rice with a hole chewed in the corner allowing some to spill out."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": [
+          "You jostle the bag of rice and more spills out. You feel guilty knowing that you're making a mess."
+        ]
+      }
+    }
+  },
+  {
+    "name": "cans",
+    "alias": ["canned food", "tins", "can", "beans", "corn", "vegetables", "can", "canned good", "canned goods"],
+    "description": [
+      "Some cans of food including beans, corn, and some vegetables."
+    ],
+    "look_at_message": {
+      "line1": "Some cans of food including beans, corn, and some vegetables."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "dry goods",
+    "alias": ["flour", "sugar", "salt", "baking supplies", "dry good", "perishable goods", "perishable good"],
+    "description": ["Some dry goods including flour, sugar, and salt."],
+    "look_at_message": {
+      "line1": "Some dry goods including flour, sugar, and salt."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "wine glasses",
+    "alias": ["glasses", "goblets", "chalices", "wine glass"],
+    "description": ["A pair of wine glasses with remnants of red wine."],
+    "look_at_message": {
+      "line1": "A pair of wine glasses with remnants of red wine.",
+      "line2": "As you look closer, you find it odd that there are no fingerprints on them and begin to get a heavy feeling in the pit of your stomach."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "cask",
+    "alias": ["keg", "barrel", "wine container", "casks", "vessel"],
+    "description": ["A large cask of red wine."],
+    "look_at_message": {
+      "line1": "A large cask of red wine.",
+      "line2": "It seems like the cask may have been tilted, causing the bottle to fall and break. It sits slightly askew, but you can't tell if it's from the fall or if it was like that before."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "pull": {
+        "message": [
+          "As you pull on the cask, you hear a loud clunk sound coming from the wall to the east. You look over and see the wall begin to part, revealing a hidden door that leads to the outside of the house. You look outside and see some footprints leading to the house. 'I wonder who left those,' you think to yourself. As you're about to go on with your search for clues, you notice the missing chair sitting outside. 'That's odd,' you think to yourself. 'I wonder how that got there.' It appears that the chair could have been used to give someone a boost to reach the opening, which sits above ground level by a few feet."
+        ],
+        "unlocks": ["arsenic"],
+        "unhides": ["arsenic"]
+      }
+    }
+  },
+  {
+    "name": "wine racks",
+    "alias": ["cellar shelves", "racks", "wine storage", "wine rack", "winerack", "wine collection"],
+    "description": ["A long row of wine racks."],
+    "look_at_message": {
+      "line1": "A long row of wine racks. Though you're not sure what you're looking for, you begin to peruse the wine collection. You find a bottle of 1982 Chateau Lafite Rothschild and wonder if it's worth anything. 'Probably not,' you think to yourself.",
+      "arsenic": "Lost in thought, you almost don't notice a small bottle hiding behind the Rothschild. You pick it up and read the label. 'Arsenic' it says. 'What the hell?' you think to yourself. You are certain that this is not supposed to be here. You should collect this as evidence."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "climb": {
+        "message": [
+          "You climb up onto the wine racks hanging on to the top of the shelf. The wood begins to dig into your fingers and you start getting some splinters. You decide it's better not to tempt fate with all of these expensive looking bottles of wine here."
+        ]
+      }
+    }
+  },
+  {
+    "name": "arsenic",
+    "alias": ["poison", "toxin", "arsenic trioxide", "arsenous oxide"],
+    "description": ["A small bottle of arsenic."],
+    "look_at_message": {
+      "line1": "A small bottle of arsenic. This definitely seems suspicious. You should collect this as evidence."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "hidden": true,
+    "locked": true,
+    "interactions": {
+      "drink": {
+        "message": [
+          "WHOA! You almost make a huge mistake in your carelessness. You should pay more attention."
+        ]
+      }
+    }
+  },
+  {
+    "name": "broken bottle",
+    "alias": ["bottle", "broken", "glass", "wine bottle", "broken wine bottle"],
+    "description": ["A wine bottle that appears to have broken in a fall."],
+    "look_at_message": {
+      "line1": "A wine bottle that appears to have broken in a fall. As you look closer you can see shards of glass mixed with red wine."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "table",
+    "alias": ["dining table"],
+    "description": [
+      "A large table with room for twelve. Eleven chairs are placed neatly around the exterior with one missing."
+    ],
+    "look_at_message": {
+      "line1": "A large table with room for twelve. Eleven chairs are placed neatly around the exterior with one missing."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "chairs",
+    "alias": ["seats", "dining chairs", "dining seats", "chair"],
+    "description": [
+      "Eleven chairs are placed neatly around the exterior of the table with one missing."
+    ],
+    "look_at_message": {
+      "line1": "Eleven chairs are placed neatly around the exterior of the table with one missing."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "sit": {
+        "message": ["You sit on one of the 11 chairs, it feels like a chair. You're hardly surprised."]
+      }
+    }
+  },
+  {
+    "name": "missing chair",
+    "alias": [
+      "absent chair",
+      "missing seat",
+      "seat which has possibly exited the building"
+    ],
+    "description": ["A chair that is missing from the table."],
+    "look_at_message": {
+      "line1": "A chair that is missing from the table. You attempt to look at it, but are having difficulty because it's not there."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "sit": {
+        "message": [
+          "You attempt to sit on the non-existent chair, instead you fall."
+        ]
+      }
+    }
+  },
+  {
+    "name": "place setting",
+    "alias": ["table setting"],
+    "description": ["A place setting at the table."],
+    "look_at_message": {
+      "line1": "A place setting at the table. It looks like Mr. Knight may have eaten here frequently."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "bowl",
+    "alias": ["dish"],
+    "description": [
+      "A rather plain looking bowl, given the fancy appearance of the cutlery."
+    ],
+    "look_at_message": {
+      "line1": "A rather plain looking bowl, given the fancy appearance of the cutlery."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "mug",
+    "alias": ["cup", "beverage holder", "tumbler", "canteen"],
+    "description": [
+      "A rather plain looking mug, given the fancy appearance of the cutlery."
+    ],
+    "look_at_message": {
+      "line1": "A rather plain looking mug, given the fancy appearance of the cutlery."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "fork",
+    "alias": ["utensil", "cutlery", "trident"],
+    "description": ["A durable looking fork with a silver finish."],
+    "look_at_message": {
+      "line1": "The fork is silver, plain, but heavy as though it is high quality and very durable. It is engraved with the letter 'K'."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You tentatively place the fork into the bedroom door having no idea if this will work. The tines glide easily into the lock and you feel a satisfying click as the door unlocks. The handle now turns freely. You are certain that this is one of Mr. Knight's more clever secrets. He must be hiding something important in here."
+        ],
+        "requires": ["bedroom door", "fork"],
+        "completes": ["unlock the bedroom door"]
+      }
+    }
+  },
+  {
+    "name": "placemat",
+    "alias": ["mat", "table mat", "table cover"],
+    "description": ["A placemat at the table."],
+    "look_at_message": {
+      "line1": "A black placemat at the end of the table. It looks like Mr. Knight may have eaten here frequently."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "plastic tubs",
+    "alias": ["containers", "storage bins", "storage tubs"],
+    "description": [
+      "A stack of plastic tubs. They look like they are used for storage."
+    ],
+    "look_at_message": {
+      "line1": "A stack of plastic tubs. They look like they are used for storing decorations and old, forgotten items, but nothing of interest."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "carboard box",
+    "alias": ["box", "storage box"],
+    "description": ["A cardboard box. It looks like it is used for storage."],
+    "look_at_message": {
+      "line1": "A cardboard box. It looks like it is used for storing decorations and old, forgotten items, but nothing of interest."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "loose paper",
+    "alias": ["sheets", "paper", "papers", "loose papers", "manuscripts"],
+    "description": [
+      "A pile of loose papers that look like they have been hastily thrown into a pile."
+    ],
+    "look_at_message": {
+      "line1": "A pile of loose papers that look like they have been hastily thrown into a pile. They seem to be old hand typed copies of Mr. Knight's work. You feel badly about the disarray of these important documents and have a sudden urge to clean them up."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "clean": {
+        "message": [
+          "You begin to clean up some of the papers in the pile trying to organize them the best you can. As you leaf through the stack, something odd about the ventilation grate catches your eye. You should take a closer look."
+        ],
+        "unhides": ["silver key"]
+      }
+    }
+  },
+  {
+    "name": "silver key",
+    "alias": ["key"],
+    "description": [
+      "A small silver key that could unlock something."
+    ],
+    "look_at_message": {
+      "line1": "A small silver key that could unlock something."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "locked": true,
+    "hidden": true,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You insert the key into the powder room door lock and turn it. The door unlocks and you are able to open it."
+        ],
+        "requires": ["powder room door"]
+      }
+    }
+  },
+  {
+    "name": "ventilation grate",
+    "alias": ["vent", "grate", "grille", "ventilation"],
+    "description": [
+      "A ventilation grate on the floor. It looks like it can't be removed by hand."
+    ],
+    "look_at_message": {
+      "line1": "A ventilation grate on the floor. It looks like it can't be removed by hand.",
+      "silver key": "A small silver key sits just out of reach. You should try to find something long to get it out."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": ["A nice message"],
+        "requires": ["gum stick"],
+        "unlocks": ["silver key"],
+        "discovers": ["silver key"]
+      }
+    }
+  },
+  {
+    "name": "cozy chairs",
+    "alias": ["chairs", "reading chairs", "armchairs", "seats"],
+    "description": [
+      "Two cozy chairs that look like they are used for reading."
+    ],
+    "look_at_message": {
+      "line1": "Two cozy chairs that look like they are used for reading. They are placed in front of a fireplace that looks like it hasn't been used in a long time."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "sit": {
+        "message": [
+          "You sit on one of the cozy chairs, you feel the need to open a book and read for hours."
+        ],
+        "new_description": [
+          "Two cozy chairs that look like they are used for reading. Don't get stuck reading forever!"
+        ]
+      }
+    }
+  },
+  {
+    "name": "fireplace",
+    "alias": ["hearth", "chimney", "old fireplace"],
+    "description": [
+      "A fireplace that looks like it hasn't been used in a long time."
+    ],
+    "look_at_message": {
+      "line1": "A fireplace that looks like it hasn't been used in a long time. It is filled with old ashes and dust."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "mantle",
+    "alias": ["dusty mantle", "mantelpiece", "fireplace mantle"],
+    "description": ["A mantle above the fireplace. It is covered in dust."],
+    "look_at_message": {
+      "line1": "A mantle above the fireplace. It is covered in dust."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "clock",
+    "alias": ["mantle clock", "time giver", "timepiece", "mechanical clock"],
+    "description": ["A clock on the mantle."],
+    "look_at_message": {
+      "line1": "An old mechanical clock that seems sturdy and well made. It seems as though it could outlast time itself."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "awards",
+    "alias": ["writing awards", "trophies", "prizes", "writing trophies"],
+    "description": ["A few writing awards celebrating Mr. Knight's work."],
+    "look_at_message": {
+      "line1": "A few writing awards celebrating Mr. Knight's work. They are all for his work in the mystery genre."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "piano",
+    "alias": ["grand piano", "keyboard"],
+    "description": ["A piano in the corner of the room."],
+    "look_at_message": {
+      "line1": "A piano in the corner of the room. A grand piano that looks like it may have been played recently. There is sheet music for 'Happy Birthday' on the stand."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "play": {
+        "message": [
+          "You sit down at the bench and play a poor rendition of 'Hot Cross Buns'. You are not a pianist and are glad that no one is around to witness your embarrassment."
+        ]
+      }
+    }
+  },
+  {
+    "name": "sheet music",
+    "alias": ["happy birthday", "music", "score", "music sheets"],
+    "description": ["Sheet music for 'Happy Birthday'."],
+    "look_at_message": {
+      "line1": "Sheet music for 'Happy Birthday'."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "drapes",
+    "alias": ["curtains", "window coverings"],
+    "description": ["Drapes that cover the windows."],
+    "look_at_message": {
+      "line1": "Drapes that cover the windows. They are a deep red color and look like they are made of velvet."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "climb": {
+        "message": ["You begin to climb the drapes and are swaying to and fro. You wonder what the late owner would think of you disgracing his memory and climb down."]
+      }
+    }
+  },
+  {
+    "name": "recliners",
+    "alias": ["movie chairs", "lounge chairs", "seats"],
+    "description": [
+      "Six individual recliners which look excellent for watching movies."
+    ],
+    "look_at_message": {
+      "line1": "Six individual recliners which look excellent for watching movies. They are all facing the wall with the projector screen."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "sit": {
+        "message": [
+          "You sink into a recliner, you wish you had the time to watch a movie but a murder is to be solved!"
+        ]
+      }
+    }
+  },
+  {
+    "name": "projector screen",
+    "alias": ["movie", "screen", "IMAX"],
+    "description": ["A projector screen."],
+    "look_at_message": {
+      "line1": "A projector screen. You wonder what movies Mr. Knight likes to watch."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "shower",
+    "alias": ["its a shower what did you expect?"],
+    "description": ["A plain tiled shower with a glass door."],
+    "look_at_message": {
+      "line1": "A plain tiled shower with a glass door. There's nothing interesting in the shower."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "turn on": {
+        "message": [
+          "You run quickly back to the cloak room, grab the yellow raincoat and put it on. As you get into the shower you turn it on and begin singing loudly, 'Singing in the rain, just singing in the rain...'. You are having a great time and are glad that no one is around to witness your embarrassment. After you're finished, you turn off the shower, take off the raincoat, and hang it back up in the cloak room before returning to the bathroom."
+        ]
+      }
+    }
+  },
+  {
+    "name": "toilet",
+    "alias": ["lavatory", "commode", "loo", "seat", "potty"],
+    "description": ["A toilet."],
+    "look_at_message": {
+      "line1": "A toilet. You peer inside, but there's nothing interesting to look at, though you're unsure what you were expecting."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "sit": {
+        "message": [
+          "You sit on the toilet, but do not feel the need to relieve yourself. Pull your pants up!"
+        ],
+        "new_description": ["A very cold toilet."]
+      },
+      "flush": {
+        "message": [
+          "You flush the toilet. You feel a little better about yourself knowing you didn't leave something gross behind."
+        ]
+      }
+    }
+  },
+  {
+    "name": "mirror",
+    "alias": ["looking glass"],
+    "description": ["A mirror."],
+    "look_at_message": {
+      "line1": "A mirror. You look at yourself and wonder if you're really cut out for this detective business. You look like a mess."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "bathroom sink",
+    "alias": ["sink", "plain sink"],
+    "description": ["A bathroom sink."],
+    "look_at_message": {
+      "line1": "A plain bathroom sink. It's not very interesting."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "turn on": {
+        "message": [
+          "You turn on the sink and splash some water on your face. You feel refreshed and ready to continue your investigation."
+        ]
+      }
+    }
+  },
+  {
+    "name": "windows",
+    "alias": ["backyard window", "window", "glass panes"],
+    "description": ["Windows that look out onto the backyard."],
+    "look_at_message": {
+      "line1": "Windows that look out onto the backyard. You can see the pool and the patio furniture."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "bookcases",
+    "alias": ["bookshelves", "bookcase", "shelves", "bookshelf", "shelf"],
+    "description": ["Bookcases filled with books."],
+    "look_at_message": {
+      "line1": "Bookcases filled with books. You see a lot of mystery novels, but there are also some books on history and science.",
+      "secret garden": "You see a few titles you recognize including 'Harry Potter and the Sorcerer's Stone', 'The Secret Garden', and 'The Lion, the Witch, and the Wardrobe'."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "climb": {
+        "message": [
+          "You climb up onto the bookcases and look around. It's very precarious and you're afraid you might fall. You decide to climb back down."
+        ]
+      }
+    }
+  },
+  {
+    "name": "desk",
+    "alias": ["oak desk", "grand desk", "grand oak desk", "king desk"],
+    "description": ["A grand, oak desk."],
+    "look_at_message": {
+      "line1": "A grand, oak desk that looks like it was made for a king. It's very large and has a lot of decorative woodwork."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": [
+          "You sit down at the desk and pretend to be a king. You say, 'I am the king of the castle, and you are the dirty rascal!' You laugh to yourself and are glad that no one is around to witness your embarrassment."
+        ]
+      }
+    }
+  },
+  {
+    "name": "picture",
+    "alias": [
+      "image",
+      "family picture",
+      "photograph",
+      "portrait",
+      "birthday picture",
+      "photo",
+      "JPEG"
+    ],
+    "description": [
+      "A picture of Mr. Knight and his family."
+    ],
+    "look_at_message": {
+      "line1": "A picture of Mr. Knight and his family during the recent birthday celebration. 'How nice', you think to yourself. As you look closer at the photo you notice something strange about it. The clock from the parlor is in the background showing the time to be 9:30pm. You remember that Mr. Knight died at approximately 2:00am the next day. As you begin to look at the family members, you remember that Rumor King allegedly left at 9:00pm, but he is clearly standing right here in the picture. From your investigation of the parlor earlier, you remember that the clock seemed accurate and sturdy. You wonder if he really did leave at 9:00pm, or if he is lying. You should keep this for evidence."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "books",
+    "alias": ["novels", "mystery books", "history books", "science books", "textbooks"],
+    "description": ["Books on the bookcase."],
+    "look_at_message": {
+      "line1": "Books on the bookcase. You see a lot of mystery novels, but there are also some books on history and science."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "secret garden",
+    "alias": ["book", "The Secret Garden"],
+    "description": ["A book titled 'The Secret Garden'."],
+    "look_at_message": {
+      "line1": "A book titled 'The Secret Garden'. You remember reading this book as a child. It was one of your favorites. You wonder if Mr. Knight has read it often because it has some strange wear on the top edge near the spine."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "hidden": true,
+    "interactions": {
+      "pull": {
+        "message": [
+          "You pull on the corner of the book and to your surprise, the bookshelf swings open revealing a long crooked hallway. You remember that there is a conservatory nearby and wonder if this is the way to get there. You should investigate this further."
+        ],
+        "requires": ["diary"]
+      }
+    }
+  },
+  {
+    "name": "harry potter",
+    "alias": ["Harry Potter and the Sorcerer's Stone"],
+    "description": ["A book titled 'Harry Potter and the Sorcerer's Stone'."],
+    "look_at_message": {
+      "line1": "A book titled 'Harry Potter and the Sorcerer's Stone'. You remember reading this book as a child. It was one of your favorites."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "hidden": true,
+    "interactions": {}
+  },
+  {
+    "name": "the lion, the witch, and the wardrobe",
+    "alias": ["The Lion, the Witch, and the Wardrobe", "narnia"],
+    "description": ["A book titled 'The Lion, the Witch, and the Wardrobe'."],
+    "look_at_message": {
+      "line1": "A book titled 'The Lion, the Witch, and the Wardrobe'. You remember reading this book as a child. It was one of your favorites."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "hidden": true,
+    "interactions": {}
+  },
+  {
+    "name": "knick-knacks",
+    "alias": ["trinkets"],
+    "description": ["Knick-knacks on the bookcase."],
+    "look_at_message": {
+      "line1": "Various knick-knacks on the bookcase. It seems to be an odd assortment of things such as a small statue of a cat, a snow globe, and a small model of a ship. You wonder if Mr. Knight is a collector of some sort."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "fountain pen",
+    "alias": ["pen"],
+    "description": ["A fountain pen."],
+    "look_at_message": {
+      "line1": "A fountain pen. It's a nice pen, but you don't have any use for it."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": [
+          "You take the lid off the pen and begin shaking it vigorously, not really sure how to use a fountain pen. In your haste, you accidentally spill ink all over the desk. You quickly put the lid back on the pen and put it back where you found it. You hope no one notices."
+        ]
+      }
+    }
+  },
+  {
+    "name": "pedestal sink",
+    "alias": ["sink", "nice sink"],
+    "description": ["A pedestal sink."],
+    "look_at_message": {
+      "line1": "A pedestal sink. It seems like a nice place to freshen up, but you don't have time for that right now."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "turn on": {
+        "message": [
+          "You turn on the faucet and water begins to flow. You cup your hands and take a drink. It's refreshing, but you don't have time for this right now."
+        ]
+      }
+    }
+  },
+  {
+    "name": "finger",
+    "alias": ["knight's finger"],
+    "description": ["A finger from a suit of armor."],
+    "look_at_message": {
+      "line1": "A finger from a suit of armor. It's a little creepy, but you have a feeling you should put it back where it belongs."
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You place the finger on the suit of armor and it fits perfectly. You wonder if Mr. Knight will notice that you fixed it for him. After you come to your senses, you realize that it's not possible given his current state. As you begin to back away, you step on a tile that depresses a little under your foot. You hear a click sound coming from the bedroom that sounded like it came from the nightstand. You should investigate."
+        ],
+        "requires": ["armor"],
+        "unhides": ["diary"],
+        "transforms": [
+          {
+            "from": "finger",
+            "to": ""
+          }
+        ],
+        "completes": ["put the finger on the armor"]
+      }
+    }
+  },
+  {
+    "name": "swords",
+    "alias": ["impressive swords", "blades"],
+    "description": ["Impressive looking swords."],
+    "look_at_message": {
+      "line1": "Impressive looking swords. You wonder if they are real or just for show."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "bows",
+    "alias": ["hunting bows", "bow and arrow", "bow"],
+    "description": ["A collection of bows."],
+    "look_at_message": {
+      "line1": "A collection of bows. You wonder if Mr. Knight is a hunter or if he just likes to collect them."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "knives",
+    "alias": ["blades"],
+    "description": ["A collection of knives."],
+    "look_at_message": {
+      "line1": "A collection of knives. Nothing appears to be missing so you move on."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "whip",
+    "alias": [],
+    "description": ["A large whip."],
+    "look_at_message": {
+      "line1": "You catch your reflection in the whip case and hold your hand over the hilt, as if you are the one cracking it through the air. It's an exciting idea but by the looks of it that case could withstand a bomb before you'd even get close to the weapon inside."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "armor",
+    "alias": ["armor", "medieval armor", "suit of armor"],
+    "description": ["A suit of armor."],
+    "look_at_message": {
+      "line1": "An old, yet very well preserved suit of armor.",
+      "finger": "You notice that one of the fingers is missing from the suit of armor. You wonder if it's somewhere nearby."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You place the finger on the suit of armor and it fits perfectly. You wonder if Mr. Knight will notice that you fixed it for him. After you come to your senses, you realize that it's not possible given his current state. As you begin to back away, you step on a tile that depresses a little under your foot. You hear a click sound coming from the bedroom that sounded like it came from the nightstand. You should investigate."
+        ],
+        "requires": ["finger"],
+        "unhides": ["diary"],
+        "completes": ["put the finger on the armor"],
+        "hides": ["finger"],
+        "transforms": [
+          {
+            "from": "finger",
+            "to": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "bed",
+    "alias": ["mattress"],
+    "description": ["A large four poster bed in the middle of the room."],
+    "look_at_message": {
+      "line1": "A large four poster bed in the middle of the room. It looks like it hasn't been slept in for a while."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "sit": {
+        "message": [
+          "You sit on the bed and notice it is very comfortable, it occurs to you that you could take a nap, but do not find it in you to lie down and do so."
+        ]
+      }
+    }
+  },
+  {
+    "name": "nightstand",
+    "alias": ["wooden nightstand", "bedside table", "night stand"],
+    "description": [
+      "A heavy, wooden nightstand next to the bed with a single drawer."
+    ],
+    "look_at_message": {
+      "line1": "A heavy, wooden nightstand next to the bed with a single drawer."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "drawer",
+    "alias": ["nightstand drawer", "wooden drawer"],
+    "description": ["A single drawer in the nightstand."],
+    "look_at_message": {
+      "line1": "A single drawer in the nightstand."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "open": {
+        "message": [
+          "You pull open the drawer and find a diary. You wonder if you should read it."
+        ],
+        "unhides": [
+          "harry potter",
+          "secret garden",
+          "the lion, the witch, and the wardrobe",
+          "diary"
+        ],
+        "unlocks": ["diary"]
+      }
+    }
+  },
+  {
+    "name": "comforter",
+    "alias": ["blanket", "fluffy comforter"],
+    "description": ["A large, fluffy comforter."],
+    "look_at_message": {
+      "line1": "A large, fluffy comforter. It looks like it hasn't been slept in for a while."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "pillows",
+    "alias": [],
+    "description": ["A collection of pillows."],
+    "look_at_message": {
+      "line1": "A collection of pillows. They look like they haven't been slept on for a while."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "diary",
+    "alias": ["leather-bound diary", "leather diary", "journal"],
+    "description": ["A personalized, leather-bound diary."],
+    "look_at_message": {
+      "line1": "You open the diary and begin to read. It's a collection of short stories that Mr. Knight has written. You read a few of them and they are actually pretty good. You wonder why he never published them. You find one diary entry rather interesting.",
+      "line2": "****************************************************************************",
+      "line3": "April 12th",
+      "line4": "",
+      "line5": "So the festivities Will commence at 8:00pm",
+      "line6": "Ellis and his wife are coming early to cook. The menu is roast lamb,",
+      "line7": "Carrots, and potatoes with rosemary breadsticks. Dessert Will be",
+      "line8": "Rhubarb pie with ice cream. Constance has promised to play the piano at",
+      "line9": "Exactly 9:30pm, the time I was born. She is excited",
+      "line10": "To play 'Happy Birthday' for me, as she has every year since staring lessons.",
+      "line11": "",
+      "line12": "Gene Will likely pester me about retirement,",
+      "line13": "And leaving the publishing house to him, even though we both know he'll",
+      "line14": "Run it into the ground once I'm gone. His",
+      "line15": "Determination just further proves that I made the right choice yesterday.",
+      "line16": "Ernie Will get a copy Monday and this whole",
+      "line17": "Nasty business Will be behind us.",
+      "line18": "",
+      "line19": "I should visit the conservatory, but when Will I find the time?",
+      "line20": "****************************************************************************"
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "hidden": true,
+    "locked": true,
+    "interactions": {}
+  },
+  {
+    "name": "will",
+    "alias": ["last will", "testament", "Will"],
+    "description": [
+      "A last will and testament which is signed by Mr. Knight."
+    ],
+    "look_at_message": {
+      "line1": "You read the will and it appears to be signed by Mr. Knight. It states that his entire estate is to be given to charity. You are sure his family was upset by this. This seems like an important piece of evidence.",
+      "line2": "****************************************************************************",
+      "line3": "I, Stewart Knight, being of sound mind and body, do hereby declare this to be",
+      "line4": "my last will and testament, and do hereby revoke any and all wills and ",
+      "line5": "codicils previously made by me.",
+      "line6": "",
+      "line7": "I direct that all of my assets of every kind and character, including any",
+      "line8": "property over which I may have a power of appointment, be disposed of as",
+      "line9": "follows:",
+      "line10": "",
+      "line11": "I give, devise, and bequeath all of my assets to the charity of my choice,",
+      "line12": "The Young Writers' Society, to be used for the benefit of young writers",
+      "line13": "in need of financial assistance while pursuing their dreams.",
+      "line14": "",
+      "line15": "Signed,",
+      "line16": "Mr. Stewart Knight, this 11th day of April, 2023",
+      "line17": "****************************************************************************"
+    },
+    "is_collectible": true,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "plants",
+    "alias": ["potted plants", "flora"],
+    "description": ["A collection of plants."],
+    "look_at_message": {
+      "line1": "A collection of plants. They look like they haven't been watered in a while."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "cafe table",
+    "alias": ["small table", "table"],
+    "description": ["A small cafe table with two chairs."],
+    "look_at_message": {
+      "line1": "A small cafe table with two chairs. One sits slightly ajar as though Mr. Knight may have sat here recently contemplating something."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "mister",
+    "alias": ["spray bottle", "sprayer", "copper mister", "humidifier"],
+    "description": ["A copper colored mister used for humidifying plants."],
+    "look_at_message": {
+      "line1": "A copper colored mister used for humidifying plants."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use": {
+        "message": [
+          "You spray the mister on the plants. They seem to enjoy it."
+        ]
+      }
+    }
+  },
+  {
+    "name": "powder room door",
+    "alias": ["door"],
+    "description": ["A plain looking door which leads to the powder room."],
+    "look_at_message": {
+      "line1": "A plain looking door which leads to the powder room."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You insert the small silver key into the keyhole and give it a turn. It unlocks the door and you are able to open it."
+        ],
+        "requires": ["silver key"]
+      }
+    }
+  },
+  {
+    "name": "bedroom door",
+    "alias": ["door", "master bedroom door"],
+    "description": ["An ornate looking door fitting the style of the home."],
+    "look_at_message": {
+      "line1": "An ornate looking door fitting the style of the home. Upon further inspection you notice an intricately engraved letter 'K' in the center."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {
+      "use_with": {
+        "message": [
+          "You tentatively place the fork into the bedroom door having no idea if this will work. The tines glide easily into the lock and you feel a satisfying click as the door unlocks. The handle now turns freely. You are certain that this is one of Mr. Knight's more clever secrets. He must be hiding something important in here."
+        ],
+        "requires": ["fork", "bedroom door"],
+        "completes": ["unlock the bedroom door"]
+      }
+    }
+  },
+  {
+    "name": "entry door",
+    "alias": ["door"],
+    "description": ["The door you entered through."],
+    "look_at_message": {
+      "line1": "The door you entered through. It is a rather nice door, but doesn't add much value to the case."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  },
+  {
+    "name": "hook",
+    "alias": [],
+    "description": [
+      "A small hook on the wall that looks like it once held a key."
+    ],
+    "look_at_message": {
+      "line1": "A small hook on the wall that looks like it once held a key. It is small and silver colored. You wonder if there is a key nearby."
+    },
+    "is_collectible": false,
+    "discovered": false,
+    "interactions": {}
+  }
+]

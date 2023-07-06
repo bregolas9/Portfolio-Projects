@@ -1,0 +1,31 @@
+name: Test
+
+on: [pull_request, push]
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      #----------------------------------------------
+      #       check-out repo and set-up python
+      #----------------------------------------------
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Set up python
+        id: setup-python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - run: |
+          python -m venv env
+          python -m pip install --upgrade pip
+          . env/bin/activate
+          python -m pip install -r requirements.txt
+          coverage run -m pytest && coverage report -m
+          python -m pytest --cov --cov-report=xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

@@ -1,0 +1,15 @@
+{
+  "title": ["                   Fork Off: A Text-Based Murder Mystery Game                   "],
+  "introduction": [
+    "Two weeks ago, in the early morning hours, world famous author Stewart Knight was found dead in his home by his maid, Ms. Smith. Mr. Knight was in his late eighties so there was no immediate suspicion of foul play, but the fighting over his estate has raised questions and concerns from the late author's lawyer Mr. Henin.",
+    "As a detective for the local police force, you have been asked to investigate Mr. Knight's tragic death in order to determine if there was any motive for murder by the family that is now squabbling over their father and grandfathers' estate.",
+    "You have been given a letter by Mr. Henin which you should read. This letter will help you keep track of your objectives. For help during the game, type the word 'help'."
+  ],
+  "ending": [
+    "After gathering the photo, the arsenic bottle, and the newly discovered will, you have plenty of evidence to suspect foul play.",
+    "The lawyer, Mr. Henin, is pleased with the evidence you've collected. He is able to execute the new will per Mr. Knight's wishes.",
+    "Because of your diligence, and with the evidence in hand, you and the local police are able to apprehend Rumor King, who acted on behalf of Martha and Wallace King, in order to prevent the family from being cut off from the financial assets belonging to Mr. Knight.",
+    "After discovering that his efforts had been in vain Rumor is more than happy to detail the plan his mother, Martha King, and uncle, Gene Knight, laid out in order to get exactly what they wanted from their father's estate. He is more than happy to testify against them in court, revealing that Gene obtained the arsenic through a contact in the local crime ring, to which he owes a mountain of gambling debt. Martha came up with the idea of staging a 'fight' between her and Rumor, one that would lead him to depart the party early. After which she would let him in through the secret Wine Cellar entrance to poison a glass of wine. Except while pouring the wine Mr. Knight discovered Rumor with Martha and insisted he rejoin the celebration. Rumor was forced to leave the wine behind and return to the party. Martha was able to slip the arsenic into the wine glass of her father and bring it to him. The wine glass is visible in his hand in the picture you recovered. The same picture that proves that Rumor did not leave when he, Martha, and Gene claim he left. All three of them are convicted of first degree murder and sentenced to life in prison.",
+    "THE END"
+  ]
+}

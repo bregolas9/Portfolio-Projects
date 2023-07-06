@@ -1,0 +1,520 @@
+[
+  {
+    "name": "entry",
+    "description": {
+      "description1": "You are standing in the entry of a large house. It is dark inside, the only light is that from the entry door you left open behind you. There is an empty hook on the wall that looks as though it once held a key. Next to it is a light switch that might control the chandelier. A low bench sits empty, underneath it are two pairs of worn leather loafers.",
+      "flashlight": "There is also a flashlight tucked behind one of the bench legs.",
+      "description2": "To the east is the cloak room. To the south is the parlor."
+    },
+    "short_description": "You are standing in the entry of a large house which appears to be dark. To the east is the cloak room. To the south is the parlor.",
+    "exits": ["cloak room", "parlor"],
+    "directional_exits": {
+      "north": null,
+      "east": "cloak room",
+      "south": "parlor",
+      "west": null
+    },
+    "aliases": ["entryway", "start", "foyer", "beginning"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "starting_inventory": [
+      "flashlight",
+      "loafers",
+      "bench",
+      "light switch",
+      "chandelier",
+      "entry door",
+      "hook"
+    ],
+    "inventory": [
+      "flashlight",
+      "loafers",
+      "bench",
+      "light switch",
+      "chandelier",
+      "entry door",
+      "hook"
+    ]
+  },
+  {
+    "name": "cloak room",
+    "description": {
+      "description1": "You are in a large cloak room. There are four empty hooks along the left wall and two more with coats, one is a yellow raincoat, the other is a black peacoat. There are several shelves that look ready to hold purses or briefcases. To the west is the entry. To the east is the kitchen. To the south is the storage room."
+    },
+    "short_description": "You are in a large cloak room. To the west is the entry. To the east is the kitchen. To the south is the storage room.",
+    "exits": ["entry", "kitchen", "storage room"],
+    "directional_exits": {
+      "north": null,
+      "east": "kitchen",
+      "south": "storage room",
+      "west": "entry"
+    },
+    "aliases": ["cloak"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": ["gum", "peacoat", "raincoat", "hooks", "shelves"],
+    "starting_inventory": ["gum", "peacoat", "raincoat", "hooks", "shelves"]
+  },
+  {
+    "name": "kitchen",
+    "description": {
+      "description1": "You are in a large, well appointed kitchen with a large refrigerator. It looks to be recently renovated with top of the line appliances. The tile counters are spotlessly clean and there are no dishes in the sink. To the south is the dining room. To the west is the cloak room. To the east is the pantry."
+    },
+    "short_description": "You are in a large kitchen with a large refrigerator. To the south is the dining room. To the west is the cloak room. To the east is the pantry.",
+    "exits": ["cloak room", "dining room", "pantry"],
+    "directional_exits": {
+      "north": null,
+      "east": "pantry",
+      "south": "dining room",
+      "west": "cloak room"
+    },
+    "aliases": ["kitchenette"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": ["cheese", "kitchen sink", "refrigerator"],
+    "starting_inventory": ["cheese", "kitchen sink", "refrigerator"]
+  },
+  {
+    "name": "pantry",
+    "description": {
+      "description1": "You are in a large pantry with boxes of dry goods and cans lining the shelves, most look store bought but a few seem to be homemade canned goods and preserves. There is a large bag of rice on the floor, the corner seems to have been chewed on and some rice has fallen out on the floor.",
+      "stick": "You spot a thin stick in the corner of the room and think it may come in handy.",
+      "description2": "To the west is the kitchen. To the south is the wine cellar. At the base of the wine cellar door, you can see a mouse hole."
+    },
+    "short_description": "You are in a large pantry with boxes of dry goods and cans lining the shelves. To the west is the kitchen. To the south is the wine cellar. At the base of the wine cellar door, you can see a mouse hole.",
+    "exits": ["kitchen", "wine cellar"],
+    "directional_exits": {
+      "north": null,
+      "east": null,
+      "south": "wine cellar",
+      "west": "kitchen"
+    },
+    "aliases": [],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": [
+      "rice",
+      "cans",
+      "dry goods",
+      "mouse hole",
+      "cellar door",
+      "stick"
+    ],
+    "starting_inventory": [
+      "rice",
+      "cans",
+      "dry goods",
+      "mouse hole",
+      "cellar door",
+      "stick"
+    ]
+  },
+  {
+    "name": "parlor",
+    "description": {
+      "description1": "The parlor has several cozy chairs around a large mantle and fireplace, in the far corner sits a grand piano. On the mantle are several writing awards as well as a large mechanical clock. To the north is the entry. To the south is the theater."
+    },
+    "short_description": "The parlor has several cozy chairs around a large mantle and fireplace. To the north is the entry. To the south is the theater.",
+    "exits": ["entry", "theater"],
+    "directional_exits": {
+      "north": "entry",
+      "east": null,
+      "south": "theater",
+      "west": null
+    },
+    "aliases": ["living room", "living area", "living"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": [
+      "cozy chairs",
+      "mantle",
+      "fireplace",
+      "piano",
+      "awards",
+      "clock",
+      "sheet music"
+    ],
+    "starting_inventory": [
+      "cozy chairs",
+      "mantle",
+      "fireplace",
+      "piano",
+      "awards",
+      "clock",
+      "sheet music"
+    ]
+  },
+  {
+    "name": "storage room",
+    "description": {
+      "description1": "You are in a large storage room with stacks of plastic tubs along the two far walls of this space. Most of them are labeled: 'CHRISTMAS' 'HALLOWEEN' '4TH OF JULY' and seem to contain decorations and games. There is a cardboard box sitting open on the floor on its side. It is labeled 'MANUSCRIPTS' and has a mess of loose paper spilling out onto the floor.",
+      "silver key": "You notice something odd about the ventilation grate, you should take a closer look.",
+      "description2": "To the east is the dining room. To the north is the cloak room."
+    },
+    "short_description": "You are in a large storage room with stacks of plastic tubs. To the east is the dining room. To the north is the cloak room.",
+    "exits": ["dining room", "cloak room"],
+    "directional_exits": {
+      "north": "cloak room",
+      "east": "dining room",
+      "south": null,
+      "west": null
+    },
+    "aliases": ["storage"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": [
+      "plastic tubs",
+      "carboard box",
+      "loose paper",
+      "ventilation grate",
+      "silver key"
+    ],
+    "starting_inventory": [
+      "plastic tubs",
+      "carboard box",
+      "loose paper",
+      "ventilation grate",
+      "silver key"
+    ]
+  },
+  {
+    "name": "dining room",
+    "description": {
+      "description1": "You are in a large dining area with a table and chairs. They are arranged in the middle of the room. The table can seat twelve but one of the chairs is missing. The table is clean except for one place setting at the far end. There is an empty bowl and mug sitting on the black placemat.",
+      "fork": "Next to the bowl is a fork. It has an interesting look to it.",
+      "description2": "To the west is the storage room. To the north is the kitchen."
+    },
+    "short_description": "You are in a large dining area with a table and chairs. To the west is the storage room. To the north is the kitchen.",
+    "exits": ["kitchen", "storage room"],
+    "directional_exits": {
+      "north": "kitchen",
+      "east": null,
+      "south": null,
+      "west": "storage room"
+    },
+    "aliases": ["dining area", "dining"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": [
+      "table",
+      "chairs",
+      "missing chair",
+      "place setting",
+      "bowl",
+      "mug",
+      "fork",
+      "placemat"
+    ],
+    "starting_inventory": [
+      "table",
+      "chairs",
+      "missing chair",
+      "place setting",
+      "bowl",
+      "mug",
+      "fork",
+      "placemat"
+    ]
+  },
+  {
+    "name": "wine cellar",
+    "description": {
+      "description1": "Inside the wine cellar, wine racks cover every inch of the walls in this light tight room. There is a cask set up as a tasting table in the center of the room. On the table are two wine glasses with remnants of red wine in them. There is a broken bottle at the foot of the cask as if it had been knocked off the table. To the north is the pantry."
+    },
+    "short_description": "You are in a large wine cellar with many bottles of wine. To the north is the pantry.",
+    "exits": ["pantry"],
+    "directional_exits": {
+      "north": "pantry",
+      "east": null,
+      "south": null,
+      "west": null
+    },
+    "aliases": ["wine", "cellar"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      },
+      {
+        "name": "open wine cellar door",
+        "message": "The door to the wine cellar appears to be locked."
+      }
+    ],
+    "inventory": [
+      "wine glasses",
+      "cask",
+      "wine racks",
+      "arsenic",
+      "broken bottle"
+    ],
+    "starting_inventory": [
+      "wine glasses",
+      "cask",
+      "wine racks",
+      "arsenic",
+      "broken bottle"
+    ]
+  },
+  {
+    "name": "theater",
+    "description": {
+      "description1": "The theater is a small room with six individual recliners, the walls have heavy velvet drapes on them and the far wall is a big projector screen. To the north is the parlor. To the east is the powder room. To the south is the study."
+    },
+    "short_description": "You are in a large theater with a large screen. To the north is the parlor. To the east is the powder room. To the south is the study.",
+    "exits": ["parlor", "powder room", "the study"],
+    "directional_exits": {
+      "north": "parlor",
+      "east": "powder room",
+      "south": "the study",
+      "west": null
+    },
+    "aliases": [],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": [
+      "drapes",
+      "recliners",
+      "projector screen",
+      "powder room door"
+    ],
+    "starting_inventory": [
+      "drapes",
+      "recliners",
+      "projector screen",
+      "powder room door"
+    ]
+  },
+  {
+    "name": "powder room",
+    "description": {
+      "description1": "You find yourself standing in a simple powder room with a pedestal sink and a toilet in the corner.",
+      "finger": "Something shiny catches your eye behind the toilet. It looks like it might be a finger.",
+      "description2": "To the west is the theater."
+    },
+    "short_description": "You find yourself standing in a simple powder room with a pedestal sink and a toilet in the corner. To the west is the theater.",
+    "exits": ["theater"],
+    "directional_exits": {
+      "north": null,
+      "east": null,
+      "south": null,
+      "west": "theater"
+    },
+    "aliases": ["powder"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      },
+      {
+        "name": "open the powder room door",
+        "message": "The door seems to be locked but you see a small keyhole which might do the trick."
+      }
+    ],
+    "inventory": ["pedestal sink", "toilet", "finger"],
+    "starting_inventory": ["pedestal sink", "toilet", "finger"]
+  },
+  {
+    "name": "master bathroom",
+    "description": {
+      "description1": "A simple bathroom attached to the main bedroom. There is a shower in the corner next to a plain looking toilet. As you walk in, there is a sink and counter. Above it, you see yourself standing in the mirror and the flashlight shines in your eyes. To the east is the master bedroom."
+    },
+    "short_description": "A simple bathroom attached to the main bedroom. To the east is the master bedroom.",
+    "exits": ["master bedroom"],
+    "directional_exits": {
+      "north": null,
+      "east": "master bedroom",
+      "south": null,
+      "west": null
+    },
+    "aliases": ["master bath", "bathroom"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": ["shower", "toilet", "mirror", "bathroom sink"],
+    "starting_inventory": ["shower", "toilet", "mirror", "bathroom sink"]
+  },
+  {
+    "name": "master bedroom",
+    "description": {
+      "description1": "You are standing at the entry to the master bedroom. As you would expect for a grand home such as this there is a four poster bed in the middle of the room, heavy velvet curtains are gathered in the corners and the bed is made with a deep purple comforter and matching pillows. It looks divinely comfortable but you would never go so far as to make yourself comfortable in a stranger's bed without permission. Next to the bed is a heavy wooden nightstand with one drawer. To the west is the master bathroom. To the south is the armory."
+    },
+    "short_description": "You are standing at the entry to the master bedroom. There is a large bed in the middle of the room. To the west is the master bathroom. To the south is the armory.",
+    "exits": ["the armory", "master bathroom"],
+    "directional_exits": {
+      "north": null,
+      "east": null,
+      "south": "the armory",
+      "west": "master bathroom"
+    },
+    "aliases": ["bedroom"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      },
+      {
+        "name": "unlock the bedroom door",
+        "message": "The door seems to be locked and you notice an oddly shaped keyhole like nothing you've ever seen before. It's narrow, like a typical keyhole, but unusually tall. Looking closer, it also looks like there might be four small grooves, almost the shape of tines."
+      }
+    ],
+    "inventory": [
+      "bed",
+      "nightstand",
+      "drawer",
+      "comforter",
+      "pillows",
+      "diary",
+      "drapes"
+    ],
+    "starting_inventory": [
+      "bed",
+      "nightstand",
+      "drawer",
+      "comforter",
+      "pillows",
+      "diary",
+      "drapes"
+    ]
+  },
+  {
+    "name": "the study",
+    "description": {
+      "description1": "Towering windows along one side of the study divide the floor-to-ceiling bookcases. There is a massive oak desk in the middle of the room facing the door you've just opened. The desk is clean except for a very expensive looking fountain pen.",
+      "picture": "Next to the pen is a small polaroid picture of the Knight family which looks rather recent.",
+      "description2": "The bookcases are stuffed with books, both Mr. Knights and others as well as knick-knacks that seem to be a mix of souvenirs and gifts. To the north is the theater. To the east is the armory. To the south is the conservatory."
+    },
+    "short_description": "Towering windows along one side of the study divide the floor-to-ceiling bookcases. To the north is the theater. To the east is the armory. To the south is the conservatory.",
+    "exits": ["theater", "conservatory", "the armory"],
+    "directional_exits": {
+      "north": "theater",
+      "east": "the armory",
+      "south": "conservatory",
+      "west": null
+    },
+    "aliases": ["study", "library"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": [
+      "windows",
+      "bookcases",
+      "desk",
+      "picture",
+      "books",
+      "knick-knacks",
+      "fountain pen",
+      "secret garden",
+      "harry potter",
+      "the lion, the witch, and the wardrobe"
+    ],
+    "starting_inventory": [
+      "windows",
+      "bookcases",
+      "desk",
+      "picture",
+      "books",
+      "knick-knacks",
+      "fountain pen",
+      "secret garden",
+      "harry potter",
+      "the lion, the witch, and the wardrobe"
+    ]
+  },
+  {
+    "name": "the armory",
+    "description": {
+      "description1": "A long tile room holds all manner of weaponry, swords and bows, knives, and even a very deadly looking whip. They are all mounted behind glass and very much off limits to the likes of you. At the far end is a gleaming set of Medieval armor. To the north is the master bedroom. To the west is the study."
+    },
+    "short_description": "You are in a large armory with many weapons. To the north is the master bedroom. To the west is the study.",
+    "exits": ["master bedroom", "the study"],
+    "directional_exits": {
+      "north": "master bedroom",
+      "east": null,
+      "south": null,
+      "west": "the study"
+    },
+    "aliases": ["armory"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      }
+    ],
+    "inventory": ["swords", "bows", "knives", "whip", "armor", "bedroom door"],
+    "starting_inventory": [
+      "swords",
+      "bows",
+      "knives",
+      "whip",
+      "armor",
+      "bedroom door"
+    ]
+  },
+  {
+    "name": "conservatory",
+    "description": {
+      "description1": "Down the long crooked hallway, you find yourself standing in a glass, domed room with many lush and exotic plants. There is a cafe table off to the side of the hallway exit with a mister sitting on top.",
+      "will": "There appears to be a piece of paper sitting on the cafe table. It looks like a will.",
+      "description2": "To the north is the study."
+    },
+    "short_description": "You are in a large conservatory with many plants. To the north is the study.",
+    "exits": ["the study"],
+    "directional_exits": {
+      "north": "the study",
+      "east": null,
+      "south": null,
+      "west": null
+    },
+    "aliases": ["conservatory"],
+    "blockers": [
+      {
+        "name": "turn on flashlight",
+        "message": "You can't see anything in the dark. You should find a light source."
+      },
+      {
+        "name": "pull secret garden",
+        "message": "You run into a bookcase. You're sure there was another room around here somewhere. You should try something else."
+      }
+    ],
+    "inventory": ["will", "plants", "cafe table", "mister"],
+    "starting_inventory": ["will", "plants", "cafe table", "mister"]
+  }
+]

@@ -1,0 +1,12 @@
+**/__pycache__
+*/settings.json
+**/env
+**/.coverage
+**/coverage.lcov
+**/coverage.xml
+save_data/**
+**/htmlcov
+**py-to-exe-config.json
+**build/
+**dist/
+**ForkOff.spec
