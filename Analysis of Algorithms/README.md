@@ -2,9 +2,6 @@
 
 Assignment: NP-Completeness and Heuristic Algorithms
 
-*Note: You will discuss Question 1 as part of the Group Assignment. (Check this*
-
-*week’s Group Assignment on Canvas for details).*
 
 **1. NP-Completeness:** Consider the Travelling Salesperson (TSP) problem that was covered in
 
